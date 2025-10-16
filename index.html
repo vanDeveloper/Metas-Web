@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi App Financiera</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #1e40af;
+      --bg: #f9fafb;
+      --text: #111827;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .feature {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 3rem;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .feature:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .feature img {
+      width: 100%;
+      max-width: 480px;
+      object-fit: cover;
+      flex: 1 1 45%;
+    }
+
+    .feature-content {
+      flex: 1 1 50%;
+      padding: 2rem;
+    }
+
+    .feature-content h2 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+
+    footer {
+      background-color: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    a.button {
+      display: inline-block;
+      background-color: white;
+      color: var(--primary);
+      font-weight: bold;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    a.button:hover {
+      background-color: #f1f5f9;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .feature {
+        flex-direction: column;
+      }
+      .feature img {
+        max-height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mi App Financiera</h1>
+    <p>Controla tus finanzas personales de forma sencilla, visual y segura.</p>
+    <a class="button" href="https://play.google.com/store/apps/details?id=com.tuapp" target="_blank">Descargar en Google Play</a>
+  </header>
+
+  <section>
+    <div class="feature">
+      <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=800&q=80" alt="Gestión de finanzas">
+      <div class="feature-content">
+        <h2>Gestión completa de tus finanzas</h2>
+        <p>Gestiona tus <strong>gastos, ingresos y transferencias</strong> entre tus cuentas. Lleva el control de tus finanzas de una forma clara y visual.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d5?auto=format&fit=crop&w=800&q=80" alt="Presupuestos y análisis">
+      <div class="feature-content">
+        <h2>Crea presupuestos inteligentes</h2>
+        <p>Configura presupuestos basados en tus gastos y analiza en qué puedes mejorar para <strong>ahorrar más</strong> y tomar mejores decisiones.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="Funciones premium">
+      <div class="feature-content">
+        <h2>Funciones exclusivas</h2>
+        <p>Accede a recordatorios automáticos, genera <strong>reportes PDF</strong> de tus cuentas y mantente siempre al día con tus movimientos.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=800&q=80" alt="Sincronización en la nube">
+      <div class="feature-content">
+        <h2>Tu información siempre segura</h2>
+        <p>Guarda todos tus datos de forma remota vinculados a tu correo y <strong>restáuralos fácilmente</strong> en otro dispositivo cuando lo necesites.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mi App Financiera. Todos los derechos reservados.</p>
+    <p><a href="politica-privacidad.html" style="color:white; text-decoration: underline;">Política de Privacidad</a></p>
+  </footer>
+</body>
+</html>
+
