@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Metas - Controla tus finanzas</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
     :root {
       --primary: #064075;
       --secondary: #042c53;
-      --bg: #f9fafb;
+      --bg: #f3f4f6;
       --text: #111827;
     }
 
@@ -58,35 +59,51 @@
       transform: translateY(-2px);
     }
 
-    /* ---------- SECCIONES ---------- */
-    section {
+    /* ---------- SECCIONES COMO CARD ---------- */
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       background-color: white;
-      margin: 0;
-      padding: 0;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .section-content {
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-content {
       flex: 1 1 45%;
       padding: 3rem 2rem;
       max-width: 600px;
     }
 
-    .section-content h2 {
+    .card-content h2 {
       color: var(--primary);
       font-size: 1.8rem;
       margin-top: 0;
     }
 
-    .section-content p {
+    .card-content p {
       font-size: 1rem;
       color: #374151;
     }
 
-    .section-image {
+    .card-image {
       flex: 1 1 55%;
       display: flex;
       align-items: center;
@@ -94,18 +111,17 @@
       background-color: #f9fafb;
     }
 
-    .section-image img {
+    .card-image img {
       width: 100%;
       max-width: 700px;
       height: auto;
       object-fit: cover;
-      border-radius: 0;
       display: block;
     }
 
-    .alt {
-      background-color: #f3f4f6;
+    .card.alt {
       flex-direction: row-reverse;
+      background-color: white;
     }
 
     /* ---------- FOOTER ---------- */
@@ -115,6 +131,7 @@
       text-align: center;
       padding: 2.5rem 1rem;
       font-size: 0.95rem;
+      margin-top: 4rem;
     }
 
     footer a {
@@ -124,7 +141,7 @@
 
     /* ---------- RESPONSIVE ---------- */
     @media (max-width: 1024px) {
-      .section-image img {
+      .card-image img {
         max-width: 550px;
       }
     }
@@ -134,15 +151,21 @@
         font-size: 2.2rem;
       }
 
-      section {
-        flex-direction: column;
+      main {
+        gap: 2rem;
+        padding: 2rem 1rem;
       }
 
-      .section-content {
+      .card {
+        flex-direction: column;
+        border-radius: 12px;
+      }
+
+      .card-content {
         padding: 2rem 1.5rem;
       }
 
-      .section-image img {
+      .card-image img {
         width: 100%;
         max-width: 100%;
       }
@@ -159,45 +182,47 @@
     </a>
   </header>
 
-  <section>
-    <div class="section-content">
-      <h2>Gestión completa de tus finanzas</h2>
-      <p>Gestiona tus <strong>gastos, ingresos y transferencias</strong> entre tus cuentas. Lleva el control de tus finanzas de una forma clara y visual.</p>
+  <main>
+    <div class="card">
+      <div class="card-content">
+        <h2>Gestión completa de tus finanzas</h2>
+        <p>Gestiona tus <strong>gastos, ingresos y transferencias</strong> entre tus cuentas. Lleva el control de tus finanzas de una forma clara y visual.</p>
+      </div>
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=1200&q=80" alt="Gestión de finanzas">
+      </div>
     </div>
-    <div class="section-image">
-      <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=1200&q=80" alt="Gestión de finanzas">
-    </div>
-  </section>
 
-  <section class="alt">
-    <div class="section-content">
-      <h2>Crea presupuestos inteligentes</h2>
-      <p>Configura presupuestos basados en tus gastos y analiza en qué puedes mejorar para <strong>ahorrar más</strong> y tomar mejores decisiones.</p>
+    <div class="card alt">
+      <div class="card-content">
+        <h2>Crea presupuestos inteligentes</h2>
+        <p>Configura presupuestos basados en tus gastos y analiza en qué puedes mejorar para <strong>ahorrar más</strong> y tomar mejores decisiones.</p>
+      </div>
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1581091012184-7c54a8b4c006?auto=format&fit=crop&w=1200&q=80" alt="Presupuestos y análisis">
+      </div>
     </div>
-    <div class="section-image">
-      <img src="https://images.unsplash.com/photo-1581091012184-7c54a8b4c006?auto=format&fit=crop&w=1200&q=80" alt="Presupuestos y análisis">
-    </div>
-  </section>
 
-  <section>
-    <div class="section-content">
-      <h2>Funciones exclusivas</h2>
-      <p>Accede a recordatorios automáticos, genera <strong>reportes PDF</strong> de tus cuentas y mantente siempre al día con tus movimientos.</p>
+    <div class="card">
+      <div class="card-content">
+        <h2>Funciones exclusivas</h2>
+        <p>Accede a recordatorios automáticos, genera <strong>reportes PDF</strong> de tus cuentas y mantente siempre al día con tus movimientos.</p>
+      </div>
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80" alt="Funciones premium">
+      </div>
     </div>
-    <div class="section-image">
-      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80" alt="Funciones premium">
-    </div>
-  </section>
 
-  <section class="alt">
-    <div class="section-content">
-      <h2>Tu información siempre segura</h2>
-      <p>Guarda todos tus datos de forma remota vinculados a tu correo y <strong>restáuralos fácilmente</strong> en otro dispositivo cuando lo necesites.</p>
+    <div class="card alt">
+      <div class="card-content">
+        <h2>Tu información siempre segura</h2>
+        <p>Guarda todos tus datos de forma remota vinculados a tu correo y <strong>restáuralos fácilmente</strong> en otro dispositivo cuando lo necesites.</p>
+      </div>
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=1200&q=80" alt="Sincronización en la nube">
+      </div>
     </div>
-    <div class="section-image">
-      <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=1200&q=80" alt="Sincronización en la nube">
-    </div>
-  </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Metas. Todos los derechos reservados.</p>
