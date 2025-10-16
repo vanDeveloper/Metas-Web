@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi App Financiera</title>
+  <title>Metas - Controla tus finanzas</title>
   <style>
     :root {
-      --primary: #2563eb;
-      --secondary: #1e40af;
+      --primary: #064075;
+      --secondary: #042c53;
       --bg: #f9fafb;
       --text: #111827;
     }
@@ -40,36 +40,40 @@
     }
 
     section {
-      padding: 3rem 1rem;
-      max-width: 1000px;
-      margin: auto;
+      padding: 0;
+      margin: 0;
     }
 
     .feature {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      margin-bottom: 3rem;
+      align-items: stretch;
+      margin: 0;
       background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      overflow: hidden;
-    }
-
-    .feature:nth-child(even) {
-      flex-direction: row-reverse;
     }
 
     .feature img {
       width: 100%;
-      max-width: 480px;
+      height: 100%;
       object-fit: cover;
-      flex: 1 1 45%;
+      flex: 1 1 50%;
     }
 
     .feature-content {
       flex: 1 1 50%;
-      padding: 2rem;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #ffffff;
+    }
+
+    .feature:nth-child(even) .feature-content {
+      background-color: #f3f4f6;
+    }
+
+    .feature:nth-child(even) {
+      flex-direction: row-reverse;
     }
 
     .feature-content h2 {
@@ -107,22 +111,22 @@
       .feature {
         flex-direction: column;
       }
-      .feature img {
-        max-height: 250px;
+      .feature-content {
+        padding: 2rem 1.5rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Mi App Financiera</h1>
+    <h1>Metas</h1>
     <p>Controla tus finanzas personales de forma sencilla, visual y segura.</p>
     <a class="button" href="https://play.google.com/store/apps/details?id=com.tuapp" target="_blank">Descargar en Google Play</a>
   </header>
 
   <section>
     <div class="feature">
-      <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=800&q=80" alt="Gestión de finanzas">
+      <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=1600&q=80" alt="Gestión de finanzas">
       <div class="feature-content">
         <h2>Gestión completa de tus finanzas</h2>
         <p>Gestiona tus <strong>gastos, ingresos y transferencias</strong> entre tus cuentas. Lleva el control de tus finanzas de una forma clara y visual.</p>
@@ -130,7 +134,8 @@
     </div>
 
     <div class="feature">
-      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d5?auto=format&fit=crop&w=800&q=80" alt="Presupuestos y análisis">
+      <!-- Imagen alternativa reemplazando el enlace roto -->
+      <img src="https://images.unsplash.com/photo-1581091012184-7c54a8b4c006?auto=format&fit=crop&w=1600&q=80" alt="Presupuestos y análisis">
       <div class="feature-content">
         <h2>Crea presupuestos inteligentes</h2>
         <p>Configura presupuestos basados en tus gastos y analiza en qué puedes mejorar para <strong>ahorrar más</strong> y tomar mejores decisiones.</p>
@@ -138,7 +143,7 @@
     </div>
 
     <div class="feature">
-      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="Funciones premium">
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80" alt="Funciones premium">
       <div class="feature-content">
         <h2>Funciones exclusivas</h2>
         <p>Accede a recordatorios automáticos, genera <strong>reportes PDF</strong> de tus cuentas y mantente siempre al día con tus movimientos.</p>
@@ -146,7 +151,7 @@
     </div>
 
     <div class="feature">
-      <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=800&q=80" alt="Sincronización en la nube">
+      <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=1600&q=80" alt="Sincronización en la nube">
       <div class="feature-content">
         <h2>Tu información siempre segura</h2>
         <p>Guarda todos tus datos de forma remota vinculados a tu correo y <strong>restáuralos fácilmente</strong> en otro dispositivo cuando lo necesites.</p>
@@ -155,7 +160,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Mi App Financiera. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Metas. Todos los derechos reservados.</p>
     <p><a href="politica-privacidad.html" style="color:white; text-decoration: underline;">Política de Privacidad</a></p>
   </footer>
 </body>
