@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Metas - Controla tus finanzas</title>
-  
   <style>
     :root {
       --primary: #064075;
@@ -21,7 +20,7 @@
       line-height: 1.6;
     }
 
-    /* Encabezado */
+    /* ---------- HEADER ---------- */
     header {
       background: var(--primary);
       color: white;
@@ -59,7 +58,7 @@
       transform: translateY(-2px);
     }
 
-    /* Secciones */
+    /* ---------- SECCIONES ---------- */
     section {
       display: flex;
       flex-wrap: wrap;
@@ -67,6 +66,7 @@
       justify-content: center;
       background-color: white;
       margin: 0;
+      padding: 0;
     }
 
     .section-content {
@@ -83,16 +83,23 @@
 
     .section-content p {
       font-size: 1rem;
+      color: #374151;
     }
 
     .section-image {
       flex: 1 1 55%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f9fafb;
     }
 
     .section-image img {
       width: 100%;
-      height: 100%;
+      max-width: 700px;
+      height: auto;
       object-fit: cover;
+      border-radius: 0;
       display: block;
     }
 
@@ -101,7 +108,7 @@
       flex-direction: row-reverse;
     }
 
-    /* Pie de página */
+    /* ---------- FOOTER ---------- */
     footer {
       background-color: var(--secondary);
       color: white;
@@ -115,6 +122,13 @@
       text-decoration: underline;
     }
 
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .section-image img {
+        max-width: 550px;
+      }
+    }
+
     @media (max-width: 768px) {
       header h1 {
         font-size: 2.2rem;
@@ -126,6 +140,11 @@
 
       .section-content {
         padding: 2rem 1.5rem;
+      }
+
+      .section-image img {
+        width: 100%;
+        max-width: 100%;
       }
     }
   </style>
@@ -146,7 +165,7 @@
       <p>Gestiona tus <strong>gastos, ingresos y transferencias</strong> entre tus cuentas. Lleva el control de tus finanzas de una forma clara y visual.</p>
     </div>
     <div class="section-image">
-      <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=1600&q=80" alt="Gestión de finanzas">
+      <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=1200&q=80" alt="Gestión de finanzas">
     </div>
   </section>
 
@@ -156,7 +175,7 @@
       <p>Configura presupuestos basados en tus gastos y analiza en qué puedes mejorar para <strong>ahorrar más</strong> y tomar mejores decisiones.</p>
     </div>
     <div class="section-image">
-      <img src="https://images.unsplash.com/photo-1581091012184-7c54a8b4c006?auto=format&fit=crop&w=1600&q=80" alt="Presupuestos y análisis">
+      <img src="https://images.unsplash.com/photo-1581091012184-7c54a8b4c006?auto=format&fit=crop&w=1200&q=80" alt="Presupuestos y análisis">
     </div>
   </section>
 
@@ -166,7 +185,7 @@
       <p>Accede a recordatorios automáticos, genera <strong>reportes PDF</strong> de tus cuentas y mantente siempre al día con tus movimientos.</p>
     </div>
     <div class="section-image">
-      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80" alt="Funciones premium">
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80" alt="Funciones premium">
     </div>
   </section>
 
@@ -176,7 +195,7 @@
       <p>Guarda todos tus datos de forma remota vinculados a tu correo y <strong>restáuralos fácilmente</strong> en otro dispositivo cuando lo necesites.</p>
     </div>
     <div class="section-image">
-      <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=1600&q=80" alt="Sincronización en la nube">
+      <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=1200&q=80" alt="Sincronización en la nube">
     </div>
   </section>
 
